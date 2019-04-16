@@ -10,11 +10,14 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
+    'name' => 'AdminLTE',
+    'homeUrl' => '/admin',
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
+            'baseUrl' => '/admin'
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -41,7 +44,9 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'admin/<a>' => 'backend/<a>',
+                '' => 'site/index',
+                '<a:\w+>' => 'site/<a>',
+                '<c:\w+>/<a:\w+>' => '<c>/<a>',
             ],
         ],
     ],

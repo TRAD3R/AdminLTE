@@ -42,7 +42,8 @@ return [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site/index',
-                '<a>' => 'site/<a>'
+                '<a:\w+>' => 'site/<a>',
+                '<c:\w+>/<a:\w+>' => '<c>/<a>',
             ],
         ],
     ],
