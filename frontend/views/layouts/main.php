@@ -30,7 +30,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php if(!Yii::$app->user->isGuest && Yii::$app->user->identity->is_admin):?>
         <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-            <a href="<?= Url::to('admin/') ?>">Dashboard</a>
+            <a href="<?= Url::to('/adminpanel') ?>">Adminpanel</a>
         </nav>
     <?php endif;?>
     <?php

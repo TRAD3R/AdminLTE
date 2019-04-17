@@ -11,13 +11,13 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'name' => 'AdminLTE',
-    'homeUrl' => '/admin',
+    'homeUrl' => '/adminpanel',
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
-            'baseUrl' => '/admin'
+            'baseUrl' => '/adminpanel'
         ],
         'user' => [
             'identityClass' => 'common\models\User',
